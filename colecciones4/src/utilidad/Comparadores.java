@@ -1,0 +1,40 @@
+package utilidad;
+
+import entidad.Pelicula;
+import java.util.Comparator;
+
+/**
+ *
+ * @author Hernan
+ */
+public class Comparadores {
+
+    public static Comparator<Pelicula> ordenarDuracionMay = new Comparator<Pelicula>() {
+        @Override
+        public int compare(Pelicula t1, Pelicula t2) {
+            return t2.getDuracion().compareTo(t1.getDuracion());
+        }
+    };
+
+    public static Comparator<Pelicula> ordenarDuracionMen = new Comparator<Pelicula>() {
+        @Override
+        public int compare(Pelicula t1, Pelicula t2) {
+            return t1.getDuracion().compareTo(t2.getDuracion());
+        }
+    };
+
+    public static Comparator<Pelicula> ordenarPorTitulo = new Comparator<Pelicula>() {
+        @Override
+        public int compare(Pelicula t1, Pelicula t2) {
+            return t1.getTitulo().compareTo(t2.getTitulo());
+        }
+    };
+
+    public static Comparator<Pelicula> ordenarPorDirector = new Comparator<Pelicula>() {
+        @Override
+        public int compare(Pelicula t1, Pelicula t2) {
+            return t1.getDirector().compareTo(t2.getDirector());
+        }
+    };
+
+}
